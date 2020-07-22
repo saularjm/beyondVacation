@@ -47,20 +47,17 @@ module.exports = function(app) {
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", (req, res) => {
     if (!req.user) {
-      console.log("trying!");
       // The user is not logged in, send back an empty object
       res.json({});
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      //console.log(req.user);
       res.json({
         firstName: req.user.firstName,
         lastName: req.user.lastName,
         email: req.user.email,
         id: req.user.id
       });
-      //console.log(req.body);
     }
   });
   ///////////////// ABOVE = user auth/login/signup ------ BELOW = routes for post, viewing, and updating listings
@@ -69,7 +66,6 @@ module.exports = function(app) {
   app.post("/api/posts", (req, res) => {
     db.Poster.create(req.body, { include: db.User }).then(list => {
       res.json(list);
-      console.log(list);
     });
   });
 
@@ -100,9 +96,8 @@ module.exports = function(app) {
     });
   });
 
-  // Route to get fully filtered listings - UNDER CONSTRUCTION
+  // Route to get fully filtered listings
   app.post("/api/posts/filtered", (req, res) => {
-    console.log("req.body", req.body);
     if (!req.body.location) {
       delete req.body.location;
     }

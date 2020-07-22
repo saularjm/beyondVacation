@@ -26,10 +26,8 @@ $(document).ready(() => {
     facilityReserve.val("");
   });
 
-  // Function to filter listings in browse - UNDER CONSTRUCTION
-  function listUser(rental, price, party, facility) { 
-    console.log("test");
-        
+  // Function to filter listings in browse
+  function listUser(rental, price, party, facility) {        
     $.post("/api/posts/filtered", {
       location: rental,
       price: price,
@@ -37,7 +35,6 @@ $(document).ready(() => {
       facility: facility
     })
       .then((results) => {
-        console.log(results);
         browseDiv.empty();
         for (i = 0; i < results.length; i++) {
                     
