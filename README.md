@@ -28,7 +28,7 @@ Beyond Vacation is a centralized location for outdoor rental spaces. Built aroun
 
 For a [video demo](https://youtu.be/xY4kl7mzGEk) of the web page
 
-For the [finished web page](https://beyondvacation.herokuapp.com/)
+For the [finished web page](https://beyond-vacation.herokuapp.com/)
 
 ### Overview
 
@@ -167,7 +167,7 @@ Browse Page:
 
 ### Launch
 
-Date [application](https://beyondvacation.herokuapp.com/) releases: `July 21st, 2020`
+Date [application](https://beyond-vacation.herokuapp.com/) releases: `July 21st, 2020`
 
 ### Future Development
 
