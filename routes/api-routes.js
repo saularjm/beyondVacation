@@ -60,7 +60,6 @@ module.exports = function(app) {
       });
     }
   });
-  ///////////////// ABOVE = user auth/login/signup ------ BELOW = routes for post, viewing, and updating listings
 
   // Route to post new listing:
   app.post("/api/posts", (req, res) => {
